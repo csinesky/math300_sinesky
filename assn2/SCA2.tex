@@ -1,0 +1,46 @@
+\documentclass[12pt]{article}
+
+\usepackage{fullpage,amssymb,amsmath,amsthm}
+
+\newtheorem{theorem}{Theorem}
+
+
+\begin{document}
+
+\section*{The Lorentz Condition:}
+\begin{equation}
+ \frac{1}{c} \frac{\delta \varphi}{\delta t} + div(A) = 0. %I'm not sure how to escape this div function, \div is the division symbol, I mention it because your in class example of \cos(x^2) works perfectly fine. 
+\end{equation}
+\noindent As we shall see, by using what are known as gauge transformations,we can always select potentials for the electromagnetic field that satisfy this condition. The nice part about having the potentials satisfy the Lorentz condition is that the PDEs (9.51)-(9.52) decouple into a pair of wave equations:
+\begin{eqnarray*} 
+\frac{\delta^2 \varphi}{\delta t^2} - c^2\nabla^2\varphi & = & 4\pi c^2 p,
+\\
+\frac{\delta^2 A}{\delta t^2}-c^2\nabla^2 A & =& 4\pi c J.
+\end{eqnarray*}
+\begin{theorem}
+\label{9.2 }
+(Lorentz Potential Equations) On a simply connected spatial region, the vector fields E, B are a solution of Maxwell's equations if and only if
+
+\begin{eqnarray}
+\label{eq:9.54}
+E& = &-\nabla\varphi - \frac{1}{c}\frac{\delta A}{\delta t} ,
+\\
+B& = &curl(A), %I'm not sure how to escape this curl either, \curl() is a nonsense function. I'm not sure what to google either. 
+\end{eqnarray}
+for some scalar field $\varphi$ and vector field A that satisfy the Lorentz potential equations
+\end{theorem}
+\begin{eqnarray}
+\frac{1}{c}\frac{\delta\varphi}{\delta t} + div(A)& = &0,
+\\
+\frac{\delta^2\varphi}{\delta t^2} -c^2\nabla^2\varphi & = &4\pi c^2 p
+\\
+\frac{\delta^2A}{\delta t^2} - c^2\nabla^2A& = &4\pi c J.
+\end{eqnarray}
+\begin{proof}
+Suppose first that $E, B$ is a solution of Maxwell's equations. We repeat some of the above arguments because we have to change the notation slightly. You will see why shortly. Thus, since div($B$) = 0, there exists a vector field $A_0$ such that curl($A_0$) = $B$. Substituting this expression for $B$ into Faraday's law gives curl$(\frac{\delta A_0}{\delta t} + E) = 0.$ Thus there exists a scalar field $\varphi_0$ such that $-\nabla\varphi_0 = \frac{\delta A_0}{\delta t} + E.$ Rearranging this gives $E = -\nabla\varphi_0 - \frac{\delta A_0}{\delta t}.$ Thus $E$ and $B$ are given by potentials $\varphi_0$ and $A_0$ in the form of equations (9.54)-(9.55). 
+%I'm unsure how to render both my in text fractions, and all of my \varphi's in the exact same way. I write this to tell that I am conscious of these differences.  
+\newpage
+The proof continues 
+\end{proof}
+
+\end{document}
